@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — CueBreak: Alcohol CBT</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #070A10;
+      --surface:   #0F1520;
+      --elevated:  #161D2B;
+      --border:    #1E2840;
+      --violet:    #A78BFA;
+      --amber:     #F59E0B;
+      --teal:      #5EEAD4;
+      --text:      #EFF1FF;
+      --muted:     #8B95B0;
+      --error:     #FF6B6B;
+      --radius:    12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+      text-decoration: none;
+    }
+
+    .wordmark-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--violet);
+      box-shadow: 0 0 12px var(--violet);
+    }
+
+    .wordmark-text {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--text);
+      text-transform: uppercase;
+    }
+
+    header h1 {
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── ToC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .toc a {
+      color: var(--violet);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+    }
+
+    section h2 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      color: var(--violet);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2::before {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 18px;
+      background: var(--violet);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 24px 0 10px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      color: var(--muted);
+      padding-left: 22px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    li { line-height: 1.65; }
+
+    strong { color: var(--text); font-weight: 600; }
+
+    a { color: var(--violet); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Callout cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+
+    .card.highlight {
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .card.highlight p { color: var(--text); }
+
+    .card-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      color: var(--muted);
+      text-transform: uppercase;
+      padding: 10px 14px;
+      background: var(--elevated);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table th:first-child { border-radius: var(--radius) 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 var(--radius) 0 0; }
+
+    .data-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    .data-table td:first-child { color: var(--text); font-weight: 500; }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+    }
+
+    .badge-local  { background: rgba(94,234,212,0.12); color: var(--teal); }
+    .badge-never  { background: rgba(167,139,250,0.12); color: var(--violet); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    footer p:last-child { margin-bottom: 0; }
+
+    .footer-brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--border);
+      text-transform: uppercase;
+      margin-top: 28px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      main { padding: 32px 16px 60px; }
+      .data-table { font-size: 13px; }
+      .data-table th,
+      .data-table td { padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">
+    <span class="wordmark-dot"></span>
+    <span class="wordmark-text">CueBreak: Alcohol CBT</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: June 30, 2026 &nbsp;·&nbsp; Exponential Dog</p>
+</header>
+
+<main>
+
+  <!-- ── TL;DR ── -->
+  <div class="card highlight">
+    <p class="card-eyebrow">The short version</p>
+    <p><strong>CueBreak: Alcohol CBT stores everything you enter on your device only.</strong> We have no server, no account system, and no way to see your data. Nothing leaves your phone. We don't use analytics, advertising, or third-party tracking of any kind.</p>
+  </div>
+
+  <!-- ── Table of contents ── -->
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">Contents</p>
+    <ol>
+      <li><a href="#who-we-are">Who we are</a></li>
+      <li><a href="#what-we-collect">What data the app stores</a></li>
+      <li><a href="#how-stored">How data is stored</a></li>
+      <li><a href="#no-sharing">Data we never collect or share</a></li>
+      <li><a href="#permissions">App permissions</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#your-rights">Your rights and choices</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <!-- ── 1. Who we are ── -->
+  <section id="who-we-are">
+    <h2>1. Who we are</h2>
+    <p>CueBreak: Alcohol CBT is developed and published by <strong>Exponential Dog</strong>. This Privacy Policy explains how the CueBreak: Alcohol CBT mobile application handles information when you use it. If you have questions, contact us at <a href="mailto:motoharujap@gmail.com">motoharujap@gmail.com</a>.</p>
+  </section>
+
+  <!-- ── 2. What we collect ── -->
+  <section id="what-we-collect">
+    <h2>2. What data the app stores</h2>
+    <p>All data is entered voluntarily by you and stored exclusively on your device. The app records the following categories of information to provide its core CBT-based functionality:</p>
+
+    <table class="data-table" aria-label="Data stored by the app">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>What is stored</th>
+          <th>Where</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Goal &amp; preferences</td>
+          <td>Your goal type (abstinence or mindful drinking), weekly drink limit, personal values, app install date</td>
+          <td><span class="badge badge-local">Device only</span></td>
+        </tr>
+        <tr>
+          <td>Urge logs</td>
+          <td>Timestamp, HALT state (Hungry / Angry / Lonely / Tired), urge intensity rating (1–10), technique chosen, outcome (surfed / drank / partial / abandoned), optional free-text location and automatic thoughts</td>
+          <td><span class="badge badge-local">Device only</span></td>
+        </tr>
+        <tr>
+          <td>Drink logs</td>
+          <td>Timestamp, drink type, quantity in standard drinks, HALT state, social context, optional location text, optional mood note, whether the drink was a conscious choice</td>
+          <td><span class="badge badge-local">Device only</span></td>
+        </tr>
+        <tr>
+          <td>If-Then plans</td>
+          <td>Trigger category, optional situation description, planned response text, usage and success counts</td>
+          <td><span class="badge badge-local">Device only</span></td>
+        </tr>
+        <tr>
+          <td>Weekly check-ins</td>
+          <td>Three self-rated slider values (urge frequency, coping quality, commitment level), timestamp</td>
+          <td><span class="badge badge-local">Device only</span></td>
+        </tr>
+        <tr>
+          <td>CBT progress</td>
+          <td>Derived metrics (success rate, milestone flags) computed from the above logs</td>
+          <td><span class="badge badge-local">Device only</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Fields marked as optional in the app (such as location and free-text notes) are never required. You may leave them blank at any time.</p>
+  </section>
+
+  <!-- ── 3. How stored ── -->
+  <section id="how-stored">
+    <h2>3. How data is stored</h2>
+    <p>All data is written to a local <strong>SQLite database</strong> and <strong>DataStore preferences file</strong> managed by the Android operating system on your device. These files are sandboxed to CueBreak: Alcohol CBT and are not accessible to other apps on your device.</p>
+    <p>We do not maintain any remote server, cloud database, or backup service. <strong>If you uninstall CueBreak: Alcohol CBT, all data is permanently deleted</strong> from your device. We have no way to recover it.</p>
+    <p>No encryption beyond the default Android application sandbox is applied. If your device is encrypted (which is the default on modern Android), the data files are covered by that device encryption.</p>
+  </section>
+
+  <!-- ── 4. No sharing ── -->
+  <section id="no-sharing">
+    <h2>4. Data we never collect or share</h2>
+    <p>Because CueBreak: Alcohol CBT has no backend, the following applies categorically:</p>
+    <ul>
+      <li><strong>We never collect your data on a server.</strong> There is no CueBreak: Alcohol CBT account, no sign-in, and no cloud sync.</li>
+      <li><strong>We never share data with third parties.</strong> No advertising networks, data brokers, or analytics services receive any information about you.</li>
+      <li><strong>We use no analytics or crash-reporting SDKs.</strong> We do not collect crash logs, session data, usage statistics, or performance metrics.</li>
+      <li><strong>We do not use advertising.</strong> CueBreak: Alcohol CBT contains no ads and no ad-targeting technology.</li>
+      <li><strong>We do not track your location.</strong> The optional location field is free text you type yourself; the app never requests GPS or network location from your device.</li>
+      <li><strong>We do not use cookies or web tracking.</strong> The app itself is not a web application and sets no cookies.</li>
+    </ul>
+  </section>
+
+  <!-- ── 5. Permissions ── -->
+  <section id="permissions">
+    <h2>5. App permissions</h2>
+    <p>CueBreak: Alcohol CBT requests the following Android system permission:</p>
+
+    <table class="data-table" aria-label="App permissions">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Why it is needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INTERNET</td>
+          <td>Used solely to open external links (such as this Privacy Policy) in your device's browser. The app itself sends no data over the network.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No other permissions (camera, microphone, contacts, location, notifications, etc.) are requested.</p>
+  </section>
+
+  <!-- ── 6. Children ── -->
+  <section id="children">
+    <h2>6. Children's privacy</h2>
+    <p>CueBreak: Alcohol CBT is designed for adults who wish to manage their relationship with alcohol. The app is <strong>not intended for use by individuals under the age of 18</strong> (or the legal drinking age in your jurisdiction, whichever is higher). We do not knowingly collect any information from minors. Because all data stays on the device and we collect nothing ourselves, there is no mechanism by which we would receive data from a minor.</p>
+    <p>If you believe a minor has used the app, the appropriate action is to uninstall it, which removes all locally stored data.</p>
+  </section>
+
+  <!-- ── 7. Your rights ── -->
+  <section id="your-rights">
+    <h2>7. Your rights and choices</h2>
+
+    <h3>Access and deletion</h3>
+    <p>Because all data is stored locally on your device, you have complete control over it at all times:</p>
+    <ul>
+      <li><strong>To delete all data:</strong> Uninstall CueBreak: Alcohol CBT. Android removes the app's sandboxed database and preferences files automatically.</li>
+      <li><strong>To delete specific entries:</strong> This feature is on our development roadmap. Currently, uninstalling and reinstalling the app is the only way to clear all data.</li>
+    </ul>
+
+    <h3>Data portability</h3>
+    <p>Export and backup functionality is on our development roadmap. At this time there is no built-in export feature. Because no data leaves your device, there is nothing held by us to request.</p>
+
+    <h3>GDPR (European Economic Area)</h3>
+    <p>If you are located in the EEA, the legal basis for processing your personal data is <strong>legitimate interests</strong> (providing the app's core functionality at your explicit request). Since we do not collect or process your data on any server, obligations such as data subject access requests, rectification, and erasure apply only to data held on your own device — which you control directly. If you have questions, contact us at <a href="mailto:motoharujap@gmail.com">motoharujap@gmail.com</a>.</p>
+
+    <h3>CCPA (California residents)</h3>
+    <p>We do not sell personal information. We do not share personal information for cross-context behavioral advertising. As a California resident you have the right to know what personal information is collected, but because all data stays on your device and we hold none of it, there is nothing for us to disclose beyond what this policy describes.</p>
+  </section>
+
+  <!-- ── 8. Changes ── -->
+  <section id="changes">
+    <h2>8. Changes to this policy</h2>
+    <p>If we make material changes to this Privacy Policy — for example if a future version of CueBreak: Alcohol CBT introduces a cloud sync feature — we will update the effective date above and, where appropriate, provide an in-app notice before the change takes effect. Continued use of CueBreak: Alcohol CBT after a change constitutes acceptance of the revised policy.</p>
+    <p>We encourage you to review this page periodically. The current version is always accessible from the Settings screen inside the app.</p>
+  </section>
+
+  <!-- ── 9. Contact ── -->
+  <section id="contact">
+    <h2>9. Contact</h2>
+    <p>If you have questions, concerns, or requests relating to this Privacy Policy or to CueBreak: Alcohol CBT's data practices, please contact:</p>
+    <div class="card">
+      <p><strong>Exponential Dog</strong><br>
+      <a href="mailto:motoharujap@gmail.com">motoharujap@gmail.com</a></p>
+    </div>
+    <p>We aim to respond to all privacy-related enquiries within 30 days.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Exponential Dog. All rights reserved.</p>
+  <p>CueBreak: Alcohol CBT is free software. No subscriptions. No payments. No tracking.</p>
+  <p class="footer-brand">Exponential Dog</p>
+</footer>
+
+</body>
+</html>
